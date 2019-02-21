@@ -1,5 +1,7 @@
 package preparation;
 
+import Util.LogStructure;
+
 import java.util.TreeMap;
 
 public class Week3 {
@@ -8,7 +10,9 @@ public class Week3 {
         day18();
     }
 
-    // Day 16
+    //------------Day 15
+
+    //------------Day 16
     public static void day16() {
         LogStructure ls = new LogStructure(5);
         ls.record(1);
@@ -20,8 +24,9 @@ public class Week3 {
         ls.record(7);
         System.out.println(ls.get(3));
     }
+    //------------Day 17
 
-    //Day18
+    //------------Day 18
     public static void day18() {
         int[] a = {10, 5, 2, 7, 8, 7};
         int k = 3;
@@ -39,5 +44,14 @@ public class Week3 {
             sorted.put(numbers[i], null);
             System.out.print(sorted.lastKey() + " ");
         }
-     }
+    }
+
+    //------------Day 19
+
+    //------------Day 20
+
+    //------------Day 21
+
+
+
 }

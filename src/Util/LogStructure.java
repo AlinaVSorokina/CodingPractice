@@ -1,4 +1,4 @@
-package preparation;
+package Util;
 
 public class LogStructure {
 
