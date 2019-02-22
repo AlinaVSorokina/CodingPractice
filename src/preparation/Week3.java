@@ -68,6 +68,36 @@ public class Week3 {
 
     //------------Day 19
 
+    public static void day9run() {
+
+    }
+
+    public static int day19(int[][] houses, int n, int k) {
+        int sum = 0;
+        int ex = -1;
+        for (int i = 0; i < n; i ++) {
+            int[] colors = houses[i];
+            int minIndex = getMin(colors, ex);
+            sum = sum + colors[minIndex];
+            ex = minIndex;
+        }
+        return sum;
+    }
+
+    private static int getMin(int[] colors, int ex) {
+        int min = Integer.MAX_VALUE;
+        int minIndex = 0;
+        for (int i = 0; i < colors.length; i++) {
+            if (i != ex && colors[i] < min) {
+                min= colors[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
+    }
+
+
+
     //------------Day 20
 
     //------------Day 21
