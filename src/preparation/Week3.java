@@ -11,7 +11,7 @@ import java.util.TreeMap;
 public class Week3 {
 
     public static void main(String[] args) {
-        day19run();
+        day21run();
     }
 
     //------------Day 15
@@ -30,7 +30,12 @@ public class Week3 {
     }
     //------------Day 17
 
+
     //------------Day 18 OK
+
+    /**
+     * Given an array of integers and a number k, where 1 <= k <= length of the array, compute the maximum values of each subarray of length k
+     */
     public static void day18run() {
         int[] a = {10, 5, 2, 7, 8, 7};
         int k = 3;
@@ -69,6 +74,11 @@ public class Week3 {
     }
 
     //------------Day 19 OK
+
+    /**
+     * A builder is looking to build a row of N houses that can be of K different colors. He has a goal of minimizing cost while ensuring that no two neighboring houses are of the same color.
+     * Given an N by K matrix where the nth row and kth column represents the cost to build the nth house with kth color, return the minimum cost which achieves this goal.
+     */
 
     public static void day19run() {
         int[][] houses = new int[3][3];
@@ -117,6 +127,10 @@ public class Week3 {
     }
 
     //------------Day 20 OK
+    /**For example, given A = 3 -> 7 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10, return the node with value 8.
+    * In this example, assume nodes with the same value are the exact same node objects.
+    * Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
+    */
 
     public static void day20run() {
 
@@ -157,6 +171,42 @@ public class Week3 {
     }
 
     //------------Day 21
+
+    /**
+     * Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required.
+     * For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
+     */
+
+    public static void day21run() {
+        int[][] times = new int[3][2];
+        times[0][0] = 30;
+        times[0][1] = 75;
+
+        times[1][0] = 0;
+        times[1][1] = 50;
+
+        times[2][0] = 60;
+        times[2][1] = 150;
+
+        System.out.println(day21(times));
+    }
+
+    public static int day21(int[][] intervals) {
+        TreeMap<Integer, Integer> times = new TreeMap<>();
+        int max = 0;
+        for (int[] pair : intervals) {
+            times.computeIfPresent(pair[0], (k, v) -> v + 1);
+            times.computeIfAbsent(pair[0], (v) -> 1);
+            times.computeIfPresent(pair[1], (k, v) -> v - 1);
+            times.computeIfAbsent(pair[1], (v) -> -1);
+        }
+        int sum = 0;
+        for (Integer key : times.keySet()) {
+            sum += times.get(key);
+            if (sum > max) max = sum;
+        }
+        return max;
+    }
 
 
 
