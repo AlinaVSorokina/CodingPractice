@@ -1,5 +1,8 @@
 package preparation.week4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Write an algorithm to justify text. Given a sequence of words and an integer line length k,
  * return a list of strings which represents each line, fully justified.
@@ -14,5 +17,11 @@ public class Day28 {
 
     public static void main(String[] args) {
 
+    }
+
+    public static List<String> getStrings(String[] words) {
+        List<String> strings = new ArrayList<>();
+
+        return strings;
     }
 }
