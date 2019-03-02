@@ -2,10 +2,10 @@ package preparation.week4;
 
 /**
  * Implement regular expression matching with the following special characters:
-    . (period) which matches any single character
-    * (asterisk) which matches zero or more of the preceding element
-     That is, implement a function that takes in a string and a valid regular
-    expression and returns whether or not the string matches the regular expression.
+ *  . (period) which matches any single character
+ * (asterisk) which matches zero or more of the preceding element
+ * That is, implement a function that takes in a string and a valid regular
+ * expression and returns whether or not the string matches the regular expression.
  */
 public class Day25 {
     public static void main(String[] args) {
