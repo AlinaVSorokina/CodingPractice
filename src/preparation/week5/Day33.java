@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class Day33 {
     public static void main(String[] args) {
-
+        //todo
     }
 
     public void printMedians(int[] a) {
